@@ -1,4 +1,8 @@
+<% if @current_user != nil %>
+
 <h1><%= @place["name"] %></h1>
+
+<h3><%= @current_user["username"]%></h3>
 
 <h2>My Entries</h2>
 <% for entry in @entries %>
@@ -10,6 +14,8 @@
 <p>
   <a href="/entries/new?place_id=<%= @place["id"] %>">New Entry</a>
 </p>
+<% end %>
+
 
 <p>
   <a href="/places">Back to All Places</a>

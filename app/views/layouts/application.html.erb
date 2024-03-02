@@ -15,9 +15,12 @@
     </div>
     <div>
       <a href="/">Home</a>
+      <% if @current_user != nil %>
       <a href="/logout">Logout</a>
+    <% else %>
       <a href="/login">Login</a>
       <a href="/users/new">Signup</a>
+      <%end%>
     </div>
 
     <%= yield %>
